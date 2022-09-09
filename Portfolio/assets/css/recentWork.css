@@ -1,0 +1,24 @@
+.recentWork__nav {
+    margin-top: 30px;
+}
+
+.recentWork__nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.recentWork__nav ul li{
+    margin-right: 30px;
+    cursor: pointer;
+    color: #5E5C7F;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+
+.recentWork__nav ul li:hover{
+    color: #FFD15C;
+}
+
+.recentWork__footer{
+    text-align: center;
+}

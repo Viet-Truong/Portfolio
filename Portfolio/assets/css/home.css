@@ -1,0 +1,82 @@
+#home{
+    display: flex;
+    color: #353353;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+#home .avatar{
+    width: 108px;
+    height: 108px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.home__social ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.home__social ul li{
+    cursor: pointer;
+    margin-right: 1.5rem;
+    transition: .4s ease
+}
+
+.home__social ul li:hover{
+    color: #FFD15C;
+}
+
+.home__social ul li i {
+    font-size: 21px;
+}
+
+
+.home__name{
+    text-align: center;
+    font-size: 36px;
+    margin: 0 10px;
+}
+
+.home__description p{
+    font-size: 16px;
+    text-shadow: 0 0 100px #353353;
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #353353; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto 20px auto; ; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(30) infinite, blink-caret .75s step-end infinite;
+}
+
+.hireMe, .button{
+    background: #FF4C60;
+    border-radius: 60px;
+    padding: 12px 32px;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ANIMATION DESCRIPTION TEXT*/
+@keyframes typing {
+    from { width: 0 }
+    70%, 90% { width: 100% }
+}
+
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #353353; }
+}

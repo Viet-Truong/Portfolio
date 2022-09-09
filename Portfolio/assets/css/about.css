@@ -1,0 +1,107 @@
+.content__title{
+    color: #454360;
+    font-weight: 700;
+    font-size: 36px;
+    position: relative;
+    white-space: nowrap
+}
+
+.content__title:before{
+    content: "";
+    display: block;
+    height: 37px;
+    width: 37px;
+    left: -14px;
+    top: -14px;
+    position: absolute;
+    background: url(https://jthemes.net/themes/wp/bolby/bolby9/wp-content/themes/bolby/images/dots-bg.svg)
+}
+
+.about__info{
+    display: flex;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__info--img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about__introduction{
+    position: relative;
+    margin-left: 50px;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    width: 77.664%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
+.about__introduction:before{
+    /* Phai co position: relative o introduction thi` o duoi moi co  */
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #FFF;
+    position: absolute;
+    left: -15px;
+    top: 20%;
+}
+
+.downloadCV{
+    margin-top: 50px;
+}
+
+.skill-item{
+    margin-bottom: 20px;
+}
+
+.about__introduction--info{
+    width: 50%;
+}
+
+.wrapper-skills{
+    width: 50%;
+    margin-left: 20px
+}
+
+.skill-info{
+    margin-bottom: 10px;
+}
+
+.skill-info .skill-value{
+    font-weight: 400;
+    float: right;
+}
+
+.progress{
+    background: #F1F1F1;
+    height: 7px;
+    border-radius: 15px;
+}
+.about__footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.about__footer--item{
+    display: flex;
+    text-align: left;
+}
+
+.icon{
+    margin-right: 20px;
+    font-size: 37px;
+    color: #DEDEEA;
+}
+
+.item__info--value{
+    font-size: 30px
+}

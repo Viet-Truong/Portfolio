@@ -1,0 +1,50 @@
+.logo{
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 110px;
+    border-right: 1px solid #dddddd;
+    z-index: 1;
+}
+
+.navbar-nav{
+    list-style-type: none;
+    font-size: 30px;
+    margin-top: 100px;
+}
+.navbar-nav li{
+    margin: 10px 0;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.navbar-nav li:hover{
+    color: #FFD15C;
+}
+
+.footer{
+    margin-top: auto;
+}
+
+.copyright{
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 14px;
+    color: #9C9AB3;
+}
