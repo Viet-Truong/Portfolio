@@ -18,7 +18,15 @@
 // });
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
 const container = document.querySelector('.recentWork__container');
+const everything_btn = document.querySelector('.recentWork__title--everything');
+const web_btn = document.querySelector('.recentWork__title--web');
+const app_btn = document.querySelector('.recentWork__title--app');
+const landingPage_btn = document.querySelector(
+    '.recentWork__title--landing-page'
+);
+const design_btn = document.querySelector('.recentWork__title--design');
 
 const app = {
     projects: [
@@ -55,7 +63,7 @@ const app = {
         {
             name: 'Blog Da Lat',
             src: './img/blog.png',
-            type: 'lLanding page',
+            type: 'Landing page',
             link: 'https://f8-blog.vercel.app/',
         },
         {
@@ -73,18 +81,15 @@ const app = {
     ],
 
     // render recent works
-    render: function () {
-        const htmls = this.projects.map((project, index) => {
+    render: function (projects) {
+        const htmls = projects.map((project, index) => {
             return `
                 <div class="recentWork__container--item" data-index="${index}">
-                    <a class="image" href='${project.link}'>
+                    <a class="image" href='${project.link}' target="_blank">
                         <div class="item">
                             <div class="item__thumb">
                                 <p>${project.type}</p>
                                 <h3>${project.name}</h3>
-                            </div>
-                            <div class="item__detail">
-                                <image src="${project.src}" loading="lazy" alt='${project.name}'/>
                             </div>
                         </div>
                     </a>
@@ -95,7 +100,7 @@ const app = {
     },
 
     start: function () {
-        this.render();
+        this.render(this.projects);
     },
 };
 
