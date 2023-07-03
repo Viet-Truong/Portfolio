@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/services.css">
     <link rel="stylesheet" href="./assets/css/experience.css">
     <link rel="stylesheet" href="./assets/css/recentWork.css">
+    <link rel="stylesheet" href="./assets/css/touch.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Portfolio</title>
 </head>
@@ -24,12 +25,13 @@
         <div class="navbar">
             <img src="./img/FB_IMG_1623839895629.jpg" alt="" class="logo">
             <ul class="navbar-nav">
-                <li><i class='bx bx-home-alt-2'></i></li>
-                <li><i class='bx bx-user'></i></li>
-                <li><i class='bx bx-briefcase'></i></li>
-                <li><i class='bx bx-book-bookmark'></i></li>
-                <li><i class='bx bx-layer'></i></li>
-                <li><i class='bx bx-chat'></i></li>
+                <li><a href="#home"><i class='bx bx-home-alt-2'></i></a></li>
+                <li><a href="#about"><i class='bx bx-user'></i></a></li>
+                <li><a href="#services"><i class='bx bx-briefcase'></i></a></li>
+                <li><a href="#experience"><i class='bx bx-book-bookmark'></i></a></li>
+                <li><a href="#recentWork"><i class='bx bx-layer'></i></a></li>
+                <li><a href="#technologies"><i class='bx bx-cog'></i></a></li>
+                <li><a href="#touch"><i class='bx bx-chat'></i></a></li>
             </ul>
             <div class="footer">
                 <p class="copyright">&#169 2022 Code by VietTruong</p>
@@ -184,12 +186,12 @@
                             <div class="info__item">
                                 <p class="info__item--time">2021 - Present</p>
                                 <h2 class="info__item--title">Front-End Developer</h2>
-                                <p class="info__item--description">Start learning to become a Frontend - Developer</p>
+                                <p class="info__item--description">Start learning to become a Frontend - Developer with ReactJS</p>
                             </div>
                             <div class="info__item">
-                                <p class="info__item--time">Feature</p>
+                                <p class="info__item--time">2023 - Present</p>
                                 <h2 class="info__item--title">Back-End Developer</h2>
-                                <p class="info__item--description"></p>
+                                <p class="info__item--description">Start learning to become a Frontend - Developer with NodeJS and Java Spring boot</p>
                             </div>
                             <div class="info__item">
                                 <p class="info__item--time"></p>
@@ -220,7 +222,29 @@
                         <h2 class="content__title">Skills</h2>
                     </div>
                 </div>
-                <div id ="touch"></div>
+                <div id ="touch" class="wrapper__content--item">
+                    <div class="touch__head">
+                        <h2 class="content__title">Touch</h2>
+                    </div>
+                    <div class="touch__container">
+                        <div class="touch__header">
+                            <h2 class="touch__container--title">Let's talk about everything!</h2>
+                            <p class="touch__container--description">Don’t like forms? Send me an <a href="mailto:viettruong0825@gmail.com">email.</a></p>
+                        </div>
+                        <div class="touch__form">
+                            <form action="">
+                                <div class="touch__form--row">
+                                    <input type="text" placeholder="Name" name="" required class="touch__form--field">
+                                    <input type="text" placeholder="Email" name="" required class="touch__form--field">
+                                </div>
+                                <div class="touch__form--row">
+                                    <textarea type="text" placeholder="Message" name="" required class="touch__form--field field-area"></textarea>
+                                </div>
+                            </form>
+                            <button class="button">Send message</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

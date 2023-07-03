@@ -1,0 +1,36 @@
+.touch__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.touch__header {
+    background-image: url(https://jthemes.net/themes/wp/bolby/bolby9/wp-content/uploads/sites/9/2021/01/map-1.svg);
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}
+
+
+.touch__container--description a {
+    color: #FF4C60;
+    text-decoration: none;
+}
+
+.touch__form--row {
+    margin-bottom: 20px;
+}
+
+.touch__form--field {
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+    border-radius: 30px;
+    padding: 20px 30px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+}
+
+.field-area {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+

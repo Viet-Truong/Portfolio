@@ -25,9 +25,9 @@
 }
 
 .experience__info--item .info__item:after{
-    content: "";
+    content: '\e019';
     background: #FFF;
-    font-family: "simple-line-icons";
+    font-family: 'simple-line-icons';
     font-size: 24px;
     color: #FF4C60;
     position: absolute;

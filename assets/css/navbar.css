@@ -26,13 +26,23 @@
     font-size: 30px;
     margin-top: 100px;
 }
+
 .navbar-nav li{
+    margin: 15px 0;
+}
+
+
+.navbar-nav li a{
     margin: 10px 0;
     cursor: pointer;
     transition: .4s all;
 }
 
-.navbar-nav li:hover{
+.navbar-nav li a{
+    color: black;
+}
+
+.navbar-nav li a:hover{
     color: #FFD15C;
 }
 
