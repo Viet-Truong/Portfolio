@@ -36,6 +36,8 @@
 
 /* RESPONSIVE */
 
+/* MOBILE */
+
 @media only screen and (min-width: 320px) and (max-width: 480px){
     #touch {
         margin-top: 50px;
@@ -69,3 +71,28 @@
     }
 }
 
+/* TABLET */
+
+@media(min-width: 768px) and (max-width: 1023px) {
+    #touch {
+        margin-top: 50px;
+    }
+    .touch__head {
+        margin-left: 40px;
+    }
+    .touch__container {
+        margin-left: 40px;
+    }
+
+    .touch__form--row {
+        margin: 0;
+    }
+    .touch__form--field {
+        width: 90%;
+        margin: 0 18px 20px 18px;
+    }
+    .touch__form .button {
+        margin-bottom: 20px;
+        margin-left: 18px;
+    }
+}

@@ -27,6 +27,8 @@
 
 /* RESPONSIVE */
 
+/* MOBILE */
+
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .technologies__head {
         margin-left: 40px;
@@ -34,6 +36,18 @@
 
     .skill__container--item {
         margin: 20px;
+    }
+
+    .skill__item-image {
+        filter: none; 
+    }
+}
+
+/* TABLET */
+
+@media(min-width: 768px) and (max-width: 1023px) {
+    .technologies__head {
+        margin-left: 40px;
     }
 
     .skill__item-image {

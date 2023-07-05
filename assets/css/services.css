@@ -55,6 +55,10 @@
     height: 16px;
 }
 
+/* RESPONSIVE */
+
+/* MOBILE */
+
 @media only screen and (min-width: 320px) and (max-width: 480px){
     #services {
         margin-top: 50px;
@@ -71,6 +75,29 @@
     }
 
     .services__info--item {
+        margin: 10px;
+    }
+}
+
+/* TABLET */
+
+@media(min-width: 768px) and (max-width: 1023px) {
+    #services {
+        margin-top: 50px;
+    }
+
+    .services__head {
+        margin-left: 40px;
+    }
+
+    .services__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__info--item {
+        width: 80%;
         margin: 10px;
     }
 }

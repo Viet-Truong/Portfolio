@@ -68,6 +68,9 @@
     text-decoration: none;
 }
 
+/* RESPONSIVE */
+
+/* MOBILE */
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
     #recentWork {
@@ -79,5 +82,24 @@
 
     .recentWork__nav ul li{
         margin: 10px;
+    }
+}
+
+/* TABLET */
+
+@media(min-width: 768px) and (max-width: 1023px) {
+    #recentWork {
+        margin-bottom: 50px;
+    }
+    .recentWork__head {
+        margin-left: 40px;
+    }
+
+    .recentWork__nav {
+        margin-left: 40px;
+    }
+
+    .recentWork__container {
+        justify-content: center;
     }
 }
