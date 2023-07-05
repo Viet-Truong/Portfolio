@@ -19,7 +19,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const container = document.querySelector('.recentWork__container');
+const recentWorkContainer = document.querySelector('.recentWork__container');
 const everything_btn = document.querySelector('.recentWork__title--everything');
 const web_btn = document.querySelector('.recentWork__title--web');
 const app_btn = document.querySelector('.recentWork__title--app');
@@ -27,80 +27,143 @@ const landingPage_btn = document.querySelector(
     '.recentWork__title--landing-page'
 );
 const design_btn = document.querySelector('.recentWork__title--design');
+const skillContainer = document.querySelector('.technologies__container');
 
 const app = {
     projects: [
         {
             name: 'Rent motorbike',
-            src: './img/rent_moto.PNG',
+            src: './img/image_project/rent_moto.PNG',
             type: 'Website',
             link: 'https://rent-moto-ui.vercel.app/',
         },
         {
             name: 'Tiktok clone',
-            src: './img/tiktok.JPG',
+            src: './img/image_project/tiktok.JPG',
             type: 'Website',
             link: 'https://tiktok-ui-liart.vercel.app/',
         },
         {
             name: 'Chat app',
-            src: './img/chatapp.JPG',
+            src: './img/image_project/chatapp.JPG',
             type: 'Website',
             link: 'https://chat-app-xi-nine.vercel.app/',
         },
         {
             name: 'Music player',
-            src: './img/music.png',
+            src: './img/image_project/music.png',
             type: 'Website',
             link: 'https://music-player-inky-nu.vercel.app/',
         },
         {
             name: 'Portfolio',
-            src: './img/port.png',
+            src: './img/image_project/port.png',
             type: 'Landing page',
             link: 'https://portfolio-eosin-five-34.vercel.app/',
         },
         {
             name: 'Blog Da Lat',
-            src: './img/blog.png',
+            src: './img/image_project/blog.png',
             type: 'Landing page',
             link: 'https://f8-blog.vercel.app/',
         },
         {
             name: 'Quan Li Ban Hang',
-            src: './img/quanlinhahang.png',
+            src: './img/image_project/quanlinhahang.png',
             type: 'App',
             link: 'https://github.com/ZuKerNo1/Quan-Li-Nha-Hang',
         },
         {
             name: 'Tour UI/UX design',
-            src: './img/tour.png',
+            src: './img/image_project/tour.png',
             type: 'Design',
             link: 'https://www.figma.com/proto/YTtuTFksEh3101KhcKxDb9/BVT_67_CuoiKy?node-id=3-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A2&mode=design&t=xeQCUYGH8a9XMVrO-1',
         },
     ],
 
+    skills: [
+        {
+            name: 'html',
+            src: '/img/image_language/html.png',
+        },
+        {
+            name: 'css',
+            src: '/img/image_language/css.png',
+        },
+        {
+            name: 'js',
+            src: '/img/image_language/js.png',
+        },
+        {
+            name: 'ts',
+            src: '/img/image_language/ts.png',
+        },
+        {
+            name: 'react',
+            src: '/img/image_language/react.png',
+        },
+        {
+            name: 'nodejs',
+            src: '/img/image_language/nodejs.png',
+        },
+        {
+            name: 'sqlserver',
+            src: '/img/image_language/sqlserver.png',
+        },
+        {
+            name: 'mongodb',
+            src: '/img/image_language/mongodb.png',
+        },
+        {
+            name: 'github',
+            src: '/img/image_language/github.png',
+        },
+        {
+            name: 'vscode',
+            src: '/img/image_language/vscode.png',
+        },
+    ],
+
     // render recent works
-    render: function (projects) {
+    renderRecentWork: function (projects) {
         const htmls = projects.map((project, index) => {
             return `
                 <div class="recentWork__container--item" data-index="${index}">
-                    <a class="image" href='${project.link}' target="_blank">
-                        <div class="item">
-                            <div class="item__thumb">
+                    <div class="item">
+                        <div class="item__thumb">
+                            <div class="item__title">
                                 <p>${project.type}</p>
                                 <h3>${project.name}</h3>
                             </div>
+                            <div class="item__link">
+                                <a href="${project.link}" target="_blank">
+                                    <button class="button">Link</button>
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             `;
         });
-        container.innerHTML = htmls.join('');
+        recentWorkContainer.innerHTML = htmls.join('');
+    },
+
+    // render skills
+    renderSkills: function (skills) {
+        const htmls = skills.map((skill, index) => {
+            return `
+                <div class="skill__container--item" data-index="${index}">
+                    <img src="${skill.src}" alt="${skill.name}" class="skill__item-image"/>
+                </div>
+            
+            `;
+        });
+        skillContainer.innerHTML = htmls.join('');
     },
 
     start: function () {
-        this.render(this.projects);
+        this.renderRecentWork(this.projects);
+        this.renderSkills(this.skills);
     },
 };
 

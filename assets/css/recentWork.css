@@ -47,6 +47,13 @@
     padding: 30px;
     z-index: 100;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item__link .button {
+    margin-top: 0;
 }
 
 .item__thumb p {
