@@ -57,6 +57,21 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
+/* SCROLLBAR */
+html ::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+    background-color: rgba(22,24,35,.06);
+    border-radius: 4px;
+}
+
+html ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 0;
+}
+
 /* RESPONSIVE */
 
 /* MOBILE */
