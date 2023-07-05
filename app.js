@@ -20,6 +20,7 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const recentWorkContainer = document.querySelector('.recentWork__container');
+// recent btn
 const everything_btn = document.querySelector('.recentWork__title--everything');
 const web_btn = document.querySelector('.recentWork__title--web');
 const app_btn = document.querySelector('.recentWork__title--app');
@@ -27,6 +28,8 @@ const landingPage_btn = document.querySelector(
     '.recentWork__title--landing-page'
 );
 const design_btn = document.querySelector('.recentWork__title--design');
+
+// skill
 const skillContainer = document.querySelector('.technologies__container');
 
 const app = {
@@ -148,6 +151,48 @@ const app = {
         recentWorkContainer.innerHTML = htmls.join('');
     },
 
+    everythingFilter: function () {
+        everything_btn.onclick = () => {
+            this.renderRecentWork(this.projects);
+        };
+    },
+
+    webFilter: function () {
+        web_btn.onclick = () => {
+            const web = this.projects.filter((project) => {
+                return project.type === 'Website';
+            });
+            this.renderRecentWork(web);
+        };
+    },
+
+    appFilter: function () {
+        app_btn.onclick = () => {
+            const app = this.projects.filter((project) => {
+                return project.type === 'App';
+            });
+            this.renderRecentWork(app);
+        };
+    },
+
+    landingPageFilter: function () {
+        landingPage_btn.onclick = () => {
+            const landingPage = this.projects.filter((project) => {
+                return project.type === 'Landing page';
+            });
+            this.renderRecentWork(landingPage);
+        };
+    },
+
+    designFilter: function () {
+        design_btn.onclick = () => {
+            const design = this.projects.filter((project) => {
+                return project.type === 'Design';
+            });
+            this.renderRecentWork(design);
+        };
+    },
+
     // render skills
     renderSkills: function (skills) {
         const htmls = skills.map((skill, index) => {
@@ -164,6 +209,11 @@ const app = {
     start: function () {
         this.renderRecentWork(this.projects);
         this.renderSkills(this.skills);
+        this.everythingFilter();
+        this.webFilter();
+        this.appFilter();
+        this.landingPageFilter();
+        this.designFilter();
     },
 };
 
