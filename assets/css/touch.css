@@ -34,3 +34,38 @@
     resize: none;
 }
 
+/* RESPONSIVE */
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    #touch {
+        margin-top: 50px;
+    }
+    .touch__head {
+        margin-left: 40px;
+    }
+
+    .touch__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .touch__header {
+        margin: 20px 0;
+    }
+
+    .touch__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .touch__form--field {
+        width: 90%;
+        margin: 20px 18px 0 18px;
+    }
+
+    .touch__form .button {
+        margin-bottom: 20px;
+    }
+}
+

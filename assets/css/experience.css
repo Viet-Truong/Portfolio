@@ -58,3 +58,27 @@
     top: 30px;
     bottom: 30px;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    #experience {
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .experience__head {
+        margin-left: 40px;
+    }
+
+    .experience__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .experience__info--item {
+        width: 90%;
+        margin: 10px;
+    }
+}

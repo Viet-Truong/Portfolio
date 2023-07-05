@@ -67,3 +67,17 @@
 .image {
     text-decoration: none;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    #recentWork {
+        margin-bottom: 50px;
+    }
+    .recentWork__head {
+        margin-left: 40px;
+    }
+
+    .recentWork__nav ul li{
+        margin: 10px;
+    }
+}
