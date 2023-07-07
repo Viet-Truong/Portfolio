@@ -145,12 +145,12 @@
     top: 134px !important;
 }
 .p17 {
-    left: 233px !important;
-    top: 11px !important;
+    left: 483px !important;
+    top: 131px !important;
 }
 .p18 {
-    left: 850px !important;
-    top: 832px !important;
+    left: 950px !important;
+    top: 232px !important;
 }
 
 .p19 {
@@ -167,6 +167,11 @@
     top: 344px !important;
 }
 
+.p22 {
+    left: 115px !important;
+    top: 443px !important;
+}
+
 
 /* ANIMATION DESCRIPTION TEXT*/
 @keyframes typing {
@@ -178,4 +183,60 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #353353; }
+}
+
+
+/* RESPONSIVE */
+
+/* TABLET */
+
+@media(min-width: 768px) and (max-width: 1023px) {
+
+    .p4 {
+        left: 237px !important;
+        top: 906px !important;
+    }
+
+    .p6 {
+        left: 487px !important;
+        top: 956px !important;
+    }
+
+    .p11 {
+        left: 527px !important;
+        top: 286px !important;
+    }
+
+    .p14 {
+        left: 587px !important;
+        top: 456px !important;
+    }
+
+    .p21 {
+        left: 237px !important;
+        top: 326px !important;
+    }
+    
+    /* over width */
+    .p3, .p5, .p7, .p9, .p12, .p13, .p15, .p18, .p19, .p20{
+        width: 0;
+    }
+
+}
+
+/* MOBILE */
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .p8 {
+        left: 337px !important;
+        top: 626px !important;
+    }
+    .p22 {
+        left: 187px !important;
+        top: 126px !important;
+    }
+    /* over width */
+    .p2, .p3, .p5, .p6, .p7, .p9, .p12, .p13, .p14, .p15, .p17, .p18, .p19, .p20{
+        width: 0;
+    }
 }
