@@ -1,21 +1,3 @@
-// import Typed from './node_modules/typed.js/lib/typed';
-
-// var Typed = require('./typed.min.js');
-// var typed = new Typed('#header-search-input', {
-//     strings: [
-//         '',
-//         "I'm a Front-End Developer",
-//         "I'm a Designer",
-//         "I'm a Android Developer",
-//     ],
-//     attr: 'placeholder',
-//     startDelay: 50,
-//     typeSpeed: 50,
-//     backSpeed: 50,
-//     smartBackspace: true,
-//     loop: true,
-//     loopCount: Infinity,
-// });
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -31,6 +13,10 @@ const design_btn = document.querySelector('.recentWork__title--design');
 
 // skill
 const skillContainer = document.querySelector('.technologies__container');
+
+// animated
+const ElementsAnimated = $$('.onScroll');
+const listElementCount = $$('.counter');
 
 const app = {
     projects: [
@@ -216,5 +202,49 @@ const app = {
         this.designFilter();
     },
 };
+
+// ANIMATED
+function handleElement(element) {
+    var rect = element.getClientRects()[0];
+    // Lay ra do dai cua man` hinh `
+    var heightScreen = window.innerHeight;
+    // check xem element co ben trong man hinh` hay k
+    if (!(rect.bottom < 0 || rect.top > heightScreen)) {
+        // ben trong man` hinh thi` code o day
+        element.classList.add('default');
+    } else {
+        // ben ngoai man` hinh thi code o day
+        element.classList.remove('default');
+    }
+}
+
+function checkAnimated() {
+    ElementsAnimated.forEach((element) => {
+        handleElement(element);
+    });
+}
+
+window.onscroll = checkAnimated;
+
+// COUNT ANIMATED
+function count(element) {
+    var number = element.querySelector('.number');
+    var finish = parseInt(number.innerText);
+    var count = 1000;
+    var step = finish * 2;
+    let counting = setInterval(() => {
+        count -= step;
+        if (count < finish) {
+            clearInterval(counting);
+            number.innerText = finish;
+        } else {
+            number.innerText = count;
+        }
+    }, 10);
+}
+
+listElementCount.forEach((item) => {
+    count(item);
+});
 
 app.start();

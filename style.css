@@ -93,7 +93,35 @@ html ::-webkit-scrollbar-track {
     }
 }
 
+/* ANIMATED */
 
+.leftToRight{
+    transform: translateX(-200%);
+    transition: all 1s;
+}
+
+.leftToRight.default{
+    transform: translateX(0);
+}
+
+
+.RightToLeft{
+    transform: translateX(200%);
+    transition: all 1s;
+}
+
+.RightToLeft.default{
+    transform: translateX(0)
+}
+
+.zoom{
+    transform: scale(0);
+    transition: all 1s;
+}
+
+.zoom.default{
+    transform: scale(1)
+}
 
 
 
